@@ -3,6 +3,10 @@ package qingke;
 import java.util.Arrays;
 
 public class Array2 {
+	public static void main(String[] args) {
+		System.out.println(Arrays.toString(fizzArray2(4)));
+	}
+
 	public int countEvens(int[] nums) {
 		int count = 0;
 		for (int i : nums) {
@@ -41,28 +45,213 @@ public class Array2 {
 		return s;
 	}
 
-	public int sum67(int[] nums) {
-		int s = 0;
-		if (nums.length == 0) {
-			return 0;
-		} else {
-			for (int i=0;i<nums.length;i++) {
-				s += nums[i];
-			}
+	public static int sum67(int[] nums) {
+		int sum = 0;
+		boolean isCount = true;
+		for (int i = 0; i < nums.length; i++) {
+			if (nums[i] == 6)
+				isCount = false;
+			if (isCount)
+				sum += nums[i];
+			if (nums[i] == 7)
+				isCount = true;
+		}
+		return sum;
+	}
 
-			for (int i = 0; i < nums.length; i++) {
-				if (nums[i] == 6) {
-					for (int j = i; j < nums.length; j++) {
-						s = s - nums[j];
-						if (nums[j] == 7) {
-							break;
-						}
+	public boolean has22(int[] nums) {
+		for (int i = 0; i < nums.length - 1; i++) {
+			if (nums[i] == 2 && nums[i + 1] == 2) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public boolean lucky13(int[] nums) {
+		for (int i = 0; i < nums.length; i++) {
+			if (nums[i] == 1 || nums[i] == 3) {
+				return false;
+			}
+		}
+		return true;
+
+	}
+
+	public boolean sum28(int[] nums) {
+		int count = 0;
+		for (int i = 0; i < nums.length; i++) {
+			if (nums[i] == 2) {
+				count++;
+			}
+		}
+		return count == 4;
+	}
+
+	public boolean more14(int[] nums) {
+		int c1 = 0;
+		int c2 = 0;
+		for (int i = 0; i < nums.length; i++) {
+			if (nums[i] == 1) {
+				c1++;
+			}
+		}
+		for (int i = 0; i < nums.length; i++) {
+			if (nums[i] == 4) {
+				c2++;
+			}
+		}
+		return c1 > c2;
+	}
+
+	public int[] fizzArray(int n) {
+		int[] a = new int[n];
+		if (n == 0) {
+			a = new int[0];
+		}
+		for (int i = 0; i < n; i++) {
+			a[i] = i;
+		}
+		return a;
+	}
+
+	public boolean only14(int[] nums) {
+		for (int i = 0; i < nums.length; i++) {
+			if (nums[i] != 1 && nums[i] != 4) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public static String[] fizzArray2(int n) {
+		String[] a = new String[n];
+		if (n == 0) {
+			a = new String[0];
+		}
+		for (int i = 0; i < n; i++) {
+			a[i] = String.valueOf(i);
+
+		}
+		return a;
+	}
+
+	public boolean no14(int[] nums) {
+		boolean a1 = false;
+		boolean a4 = false;
+		for (int i = 0; i < nums.length; i++) {
+			if (nums[i] == 1) {
+				a1 = true;
+
+			}
+			if (nums[i] == 4) {
+				a4 = true;
+			}
+		}
+		return !(a1 && a4);
+	}
+
+	public boolean isEverywhere(int[] nums, int val) {
+		boolean odd = true;
+		boolean even = true;
+		for (int i = 0; i < nums.length; i++) {
+			if (i % 2 == 0) {
+				if (nums[i] != val) {
+					odd = false;
+				}
+			} else {
+				if (nums[i] != val) {
+					even = false;
+				}
+			}
+		}
+		return odd || even;
+	}
+
+	public boolean either24(int[] nums) {
+		boolean a = false;
+		boolean b = false;
+		for (int i = 0; i < nums.length - 1; i++) {
+
+			if (nums[i] == 2 && nums[i + 1] == 2) {
+				a = true;
+			}
+			if (nums[i] == 4 && nums[i + 1] == 4) {
+				b = true;
+			}
+		}
+		if (a && b) {
+			return false;
+		}
+		return a || b;
+	}
+
+	public int matchUp(int[] nums1, int[] nums2) {
+		int count = 0;
+		for (int i = 0; i < nums1.length; i++) {
+			if (Math.abs(nums1[i] - nums2[i]) < 3 && Math.abs(nums1[i] - nums2[i]) != 0) {
+				count++;
+			}
+		}
+		return count;
+	}
+
+	public boolean has77(int[] nums) {
+		for (int i = 0; i < nums.length - 1; i++) {
+			if (nums[i] == 7 && nums[i + 1] == 7) {
+				return true;
+			}
+		}
+		for (int i = 0; i < nums.length - 2; i++) {
+			if (nums[i] == 7 && nums[i + 2] == 7) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public boolean has12(int[] nums) {
+		for (int i = 0; i < nums.length; i++) {
+			if (nums[i] == 1) {
+				for (int j = i + 1; j < nums.length; j++) {
+					if (nums[j] == 2) {
+						return true;
 					}
 				}
 			}
+		}
+		return false;
+	}
+
+	public boolean modThree(int[] nums) {
+		for (int i = 0; i < nums.length - 2; i++) {
+			if (nums[i] % 2 == 0 && nums[i + 1] % 2 == 0 && nums[i + 2] % 2 == 0) {
+				return true;
+			} else if (nums[i] % 2 != 0 && nums[i + 1] % 2 != 0 && nums[i + 2] % 2 != 0) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public boolean haveThree(int[] nums) {
+
+		int count = 0;
+		for (int i = 0; i < nums.length; i++) {
+			if (nums[i] == 3) {
+				count++;
+			}
 
 		}
-		return s;
+		if(count==3){
+			for (int i = 0; i < nums.length-1; i++){
+				if(nums[i]==3&&nums[i+1]==3){
+					return false;
+				}
+			}
+			return true;
+		}
+		return false;
 	}
 
 }
