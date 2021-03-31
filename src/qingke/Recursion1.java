@@ -57,6 +57,38 @@ public class Recursion1 {
 			  return triangle(rows-1)+rows;
 		  }
 	}
+	public int sumDigits(int n) {
+		  if(n<10){
+			  return n;
+		  }else {
+			  return n%10+sumDigits(n/10);
+		  }
+	}
+	public int count7(int n) {
+		  if(n==7){
+			  return 1;
+		  }
+		  if(n!=7&&n<10){
+			  return 0;
+		  }
+			  else{
+			  return count7(n/10)+count7(n%10);
+		  }
+	}
+	public int count8(int n) {
+		  if()
+	}
+	public int powerN(int base, int n) {
+		if(n==1){
+			return base;
+		}else{
+			return powerN(base,n-1)*base;
+		}
+		  
+	}
+
+
+
 
 
 
