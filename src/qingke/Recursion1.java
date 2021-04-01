@@ -75,9 +75,9 @@ public class Recursion1 {
 			  return count7(n/10)+count7(n%10);
 		  }
 	}
-	public int count8(int n) {
-		  if()
-	}
+//	public int count8(int n) {
+//		  if()
+//	}
 	public int powerN(int base, int n) {
 		if(n==1){
 			return base;
