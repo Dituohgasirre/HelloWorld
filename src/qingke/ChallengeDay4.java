@@ -7,12 +7,14 @@ import java.util.Arrays;
 public class ChallengeDay4 {
 
 	public static void main(String[] args) {
-		String[] arr = { "JQ", "make", "o", "JQasd" };
+		String[] arr = { "","f","","f","a","ss","b","JQ","b","fv","a","ss"};
 		System.out.println(Arrays.toString(deljq(arr)));
 		String s[][]=sep(arr);
 		
 		System.out.println(Arrays.deepToString(s));
-		System.out.println(Arrays.deepToString(reverse(s)));
+		String a[][]=reverse(s);
+		System.out.println(Arrays.deepToString(a));
+		System.out.println(Arrays.deepToString(delrep(a)));
 	}
 
 	public static String[] deljq(String[] nums){
@@ -66,5 +68,43 @@ public class ChallengeDay4 {
 		}
 		return nums;
 	}
+	public static String[][] delrep(String[][] nums){
+		String[][] arr =nums;
+		for(int i=0;i<nums.length;i++){
+			arr[i]=nums[i];
+		}
+		for(int i=0;i<nums.length;i++){
+			for(int j=0;j<2;j++){
+				for(int k=0;k<nums.length;k++){
+					for(int l=0;l<2;l++){
+						if(!(i==k&&j==l)&&arr[i][j]==nums[k][l]){
+							arr[k][l]=null;
+						}
+					}
+				}
+			}
+		}
+		int count=0;
+		for(int i=0;i<arr.length;i++){
+			if(arr[i][0]==null&&arr[i][1]==null){
+				count++;
+			}
+		}
+		String[][] newArr =new String[arr.length-count][];
+		for(int i=0,j=0;i<arr.length;i++){
+			if(arr[i][0]!=null&&arr[i][1]!=null){
+				newArr[j]=arr[i];
+				j++;
+			}else if(arr[i][0]!=null){
+				newArr[j]=new String[]{arr[i][0]};
+				j++;
+			}else if(arr[i][1]!=null){
+				newArr[j]=new String[]{arr[i][1]};
+				j++;
+			}
+		}
+		return newArr;
+	}
+	
 	
 }
