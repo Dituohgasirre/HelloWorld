@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class playCards {
 	private Card[] cards;
-	
+	private int count=0;
 	public playCards(){
 		initializeCards();
 	}
@@ -28,5 +28,16 @@ public class playCards {
 				cards[b]= p;
 			}
 		}
+	}
+	public boolean hasNext(){
+		if(count<54){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public Card nextCard(){
+		count++;
+		return cards[count-1];
 	}
 }

@@ -40,7 +40,7 @@ public class Card {
 		}else if(value>=41&&value<=44){
 			facevalue="J";
 		}else if(value>=5&&value<=40){
-			facevalue=""+(value-1)/4+1;
+			facevalue=""+((value-1)/4+1);
 		}else{
 			facevalue="A";
 		}
