@@ -1,15 +1,16 @@
 package qingke;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 
 public class ArrayListTest {
 	public static void main(String[] args) {
-		ArrayList<Integer> numberlist = new ArrayList<Integer>();
-		numberlist.add(10);
-		numberlist.add(20);
-		numberlist.add(30);
-		Iterator<Integer> it = numberlist.iterator();
+		ArrayList<String> numberlist = new ArrayList<String>();
+		numberlist.add("cat");
+		numberlist.add("dog");
+		numberlist.add("fish");
+		Iterator<String> it = numberlist.iterator();
 		while (it.hasNext()) {
 			System.out.println(it.next());
 		}
@@ -21,15 +22,16 @@ public class ArrayListTest {
 		}
 		System.out.println("-----------");
 
-		for (Integer value : numberlist) {
+		for (String value : numberlist) {
 			System.out.println(value);
 		}
 		System.out.println("-----------");
 		numberlist.remove(0);
-		for (Integer value : numberlist) {
+		for (String value : numberlist) {
 			System.out.println(value);
 		}
-
+		System.out.println(numberlist.contains("do"));
+		System.out.println(Arrays.toString(numberlist.toArray()));
 	}
 
 }
