@@ -3,13 +3,13 @@ package com.qingke.employee;
 public class Employee {
 	private String name;
 	private String id;
-	private int salary;
+	private double salary;
 	
 	public Employee(){
 		
 	}
 	
-	public Employee(String name,String id,int salary){
+	public Employee(String name,String id,double salary){
 		this.name=name;
 		this.id=id;
 		this.salary=salary;
@@ -26,10 +26,10 @@ public class Employee {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public int getSalary() {
+	public double getSalary() {
 		return salary;
 	}
-	public void setSalary(int salary) {
+	public void setSalary(double salary) {
 		this.salary = salary;
 	}
 	
