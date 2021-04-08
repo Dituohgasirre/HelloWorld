@@ -40,5 +40,6 @@ public class ListTest {
 		LinkedHashSet<Integer> set =new LinkedHashSet<>(list);
 		ArrayList<Integer> l=new ArrayList<Integer>(set);
 		return l;
+		
 	}
 }
