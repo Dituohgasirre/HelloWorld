@@ -17,6 +17,7 @@ public class ListTest {
 		list.add(6);
 		list.add(6);
 		list.add(8);
+		System.out.println(list);
 		
 		Iterator<Integer> it =delrep(list).iterator();
 		while(it.hasNext()){

@@ -30,7 +30,7 @@ class Student implements Comparator<Student>{
 	}
 	@Override
 	public String toString() {
-		return "id=" + id + ", name=" + name + "]";
+		return "id=" + id + ", name=" + name ;
 	}
 //	@Override
 //	public int compareTo(Student student) {
@@ -83,6 +83,7 @@ public class ListTest1 {
 		for(Student stu :stus){
 			System.out.println(stu);
 		}
+		System.out.println(stus);
 	}
 
 	
