@@ -7,7 +7,7 @@ public class Test {
 
 	public static void main(String[] args) {
 		HR hr =new HR();
-		ArrayList<Employee> list = new ArrayList<>();
+		//ArrayList<Employee> list = new ArrayList<>();
 //		list.add(new Employee());
 //		list.add(new Employee());
 //		list.add(new Employee());
@@ -21,6 +21,7 @@ public class Test {
 		for(Employee e :hr.resignEmployee("10")){
 			System.out.println(e);
 		}
+		hr.salaryDistribution(HR.salarys);
 	}
 
 }
