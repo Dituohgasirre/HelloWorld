@@ -3,9 +3,7 @@ package com.qingke.employee;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 
 
@@ -71,20 +69,5 @@ public class HR extends Employee{
 			}
 		}
 		return list;
-	}
-	public void salaryDistribution(double[] str){
-		Map<Double,Integer> map =new HashMap<Double,Integer>();
-		for(int i=0;i<str.length;i++){
-			int count =0;
-			for(int j=0;j<str.length;j++){
-				if(str[i]==str[j]){
-					count++;
-				}
-			}
-			map.put(str[i], count);
-		}
-		for(Map.Entry<Double,Integer> entry : map.entrySet()){
-			System.out.println("工资"+entry.getKey()+"的有"+entry.getValue()+"人");
-		}
 	}
 }

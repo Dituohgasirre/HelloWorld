@@ -1,6 +1,7 @@
 package qingke;
 
-import java.util.HashMap;
+import java.util.Collection;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -68,7 +69,7 @@ public class MapTest1 {
 		Person p2 = new Person("1","Micra");
 		Person p3 = new Person("2","car");
 		Person p4 = new Person("0","Bob");
-		Map<Person,	Integer> map =new HashMap<>();
+		Map<Person,	Integer> map =new LinkedHashMap<>();
 		map.put(p1, 1);
 		map.put(p2, 3);
 		map.put(p3, 4);
@@ -77,8 +78,8 @@ public class MapTest1 {
 		for(Person key:keys){
 			System.out.println(key);
 		}
-		//Collection<Integer> values=map.values();
-		for(Integer value: map.values()){
+		Collection<Integer> values=map.values();
+		for(Integer value: values){
 			System.out.println(value);
 		}
 		for(Map.Entry<Person, Integer> entry:map.entrySet()){

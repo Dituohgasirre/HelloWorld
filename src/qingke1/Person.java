@@ -1,6 +1,6 @@
 package qingke1;
 
-public class Person implements Cloneable{
+public class Person {
 	private String name;
 	private String address;
 	
@@ -11,9 +11,6 @@ public class Person implements Cloneable{
 	public String getName(){
 		return name;
 	}
-	public void setName(String name){
-		this.name=name;
-	}
 	public String getAddress(){
 		return address;
 	}
@@ -23,7 +20,4 @@ public class Person implements Cloneable{
 	public String toString(){
 		return "Person[name="+name+",address="+address+"]";
 	}
-	 public  Object clone() throws CloneNotSupportedException{
-		 return super.clone();
-	 }
 }
