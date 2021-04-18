@@ -9,7 +9,7 @@ public class HelloWorld {
 		System.out.println("请输入你的名字：");
 		Scanner sc = new Scanner(System.in);
 		String name = sc.nextLine();
-		System.out.println("你好"+ name);
+		System.out.println("你好" + name);
 		sc.close();
 	}
 

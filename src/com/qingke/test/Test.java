@@ -8,10 +8,9 @@ public class Test {
 		LearnFile lf = new LearnFile();
 		lf.storage();
 		System.out.println("«Î ‰»Î√¸¡Ó£∫");
-		Scanner sc =new Scanner(System.in);
-		String input =sc.nextLine();
-		
-		
+		Scanner sc = new Scanner(System.in);
+		String input = sc.nextLine();
+
 		sc.close();
 	}
 

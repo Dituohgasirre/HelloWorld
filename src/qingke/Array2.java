@@ -333,70 +333,70 @@ public class Array2 {
 				nums[i] = 0;
 			}
 		}
-		int index =0;
-		for(int i=0;i<nums.length;i++){
-			if(nums[i]!=0){
-				int temp=nums[i];
-				nums[i]=nums[index];
-				nums[index]=temp;
+		int index = 0;
+		for (int i = 0; i < nums.length; i++) {
+			if (nums[i] != 0) {
+				int temp = nums[i];
+				nums[i] = nums[index];
+				nums[index] = temp;
 				index++;
 			}
 		}
 		return nums;
 	}
+
 	public int[] zeroMax(int[] nums) {
-		int max=0;
-		  for(int i=0;i<nums.length;i++){
-			  if(nums[i]==0){
-				  max=0;
-				  for(int j=i+1;j<nums.length;j++){
-					  if(nums[j]%2==1){
-						 max=Math.max(max, nums[j]);
-					  }
-				  }
-				  nums[i]=max;
-			  }
-		  }
-		  return nums;
-	}
-	public static int[] evenOdd(int[] nums){
-		int el=0;
-		int ol=0;
-		int[] even=new int[nums.length];
-		int[] odd=new int[nums.length];
-		for(int i=0;i<nums.length;i++){
-			if(nums[i]%2==0)
-				even[el++]=nums[i];
-			else
-				odd[ol++]=nums[i];
-		}
-		for(int i=nums.length-1;i>-1;i--){
-			if(ol>0)
-				nums[i]=odd[--ol];
-			else
-				nums[i]=even[--el];
+		int max = 0;
+		for (int i = 0; i < nums.length; i++) {
+			if (nums[i] == 0) {
+				max = 0;
+				for (int j = i + 1; j < nums.length; j++) {
+					if (nums[j] % 2 == 1) {
+						max = Math.max(max, nums[j]);
+					}
+				}
+				nums[i] = max;
+			}
 		}
 		return nums;
 	}
-	public String[] fizzBuzz(int start, int end) {
-		String[] a =new String[end-start];
-		int k=0;
-		  for(int i=start;i<end;i++,k++){
-			  if(i%15==0){
-				  a[k]="FizzBuzz";
-			  
-			  }else if(i%3==0){
-				  a[k]="Fizz";
-			  }else if(i%5==0){
-				  a[k]="Buzz";
-			  }else{
-				  a[k]=String.valueOf(i);
-			  }
-		  }
-		  return a;
+
+	public static int[] evenOdd(int[] nums) {
+		int el = 0;
+		int ol = 0;
+		int[] even = new int[nums.length];
+		int[] odd = new int[nums.length];
+		for (int i = 0; i < nums.length; i++) {
+			if (nums[i] % 2 == 0)
+				even[el++] = nums[i];
+			else
+				odd[ol++] = nums[i];
+		}
+		for (int i = nums.length - 1; i > -1; i--) {
+			if (ol > 0)
+				nums[i] = odd[--ol];
+			else
+				nums[i] = even[--el];
+		}
+		return nums;
 	}
 
+	public String[] fizzBuzz(int start, int end) {
+		String[] a = new String[end - start];
+		int k = 0;
+		for (int i = start; i < end; i++, k++) {
+			if (i % 15 == 0) {
+				a[k] = "FizzBuzz";
 
-
+			} else if (i % 3 == 0) {
+				a[k] = "Fizz";
+			} else if (i % 5 == 0) {
+				a[k] = "Buzz";
+			} else {
+				a[k] = String.valueOf(i);
+			}
+		}
+		return a;
+	}
 
 }

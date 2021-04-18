@@ -1,6 +1,5 @@
 package qingke;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -235,63 +234,66 @@ public class everyNth {
 
 	public boolean sameStarChar(String str) {
 		if (str.length() < 3) {
-			if(str!="**"&&str!=""&&str!="*"){
+			if (str != "**" && str != "" && str != "*") {
 				return false;
 			}
 		} else {
 			for (int i = 0; i < str.length() - 2; i++) {
 				if (str.charAt(i + 1) == '*' && str.charAt(i) != str.charAt(i + 2)) {
 					return false;
-					
+
 				}
-//				if(str.charAt(i + 1) == '*' && str.charAt(i) == str.charAt(i + 2)){
-//					return true;
-//				}
+				// if(str.charAt(i + 1) == '*' && str.charAt(i) == str.charAt(i
+				// + 2)){
+				// return true;
+				// }
 			}
 		}
 		return true;
 	}
+
 	public String oneTwo(String str) {
-		  String s1 ="";
-		  for(int i=0;i<str.length()-2;i+=3){
-			  s1=s1+str.charAt(i+1)+str.charAt(i+2)+str.charAt(i);
-		  }
-		  return s1;
+		String s1 = "";
+		for (int i = 0; i < str.length() - 2; i += 3) {
+			s1 = s1 + str.charAt(i + 1) + str.charAt(i + 2) + str.charAt(i);
+		}
+		return s1;
 	}
-//	public String zipZap(String str) {
-//		String s1 ="";
-//		if(str.length()<3){
-//			return str;
-//		}
-//		for(int i=0;i<str.length()-2;i++){
-//			if(str.charAt(i)!='z'&&str.charAt(i+2)!='p'){
-//				return str;
-//			}
-//		}
-//		for(int i=0;i<str.length()-2;i++){
-//			
-//			if(str.charAt(i)!='z'&&str.charAt(i+2)!='p'){
-//				s1=s1+str.charAt(i)+str.charAt(i+1)+str.charAt(i+2);
-//			
-//			}else{
-//				s1=s1+str.charAt(i)+str.charAt(i+2);
-//			}
-//		}
-//		return s1;
-//	}
-	public static String zipZap(String string){
-		byte[] bytes = string.getBytes ();
+
+	// public String zipZap(String str) {
+	// String s1 ="";
+	// if(str.length()<3){
+	// return str;
+	// }
+	// for(int i=0;i<str.length()-2;i++){
+	// if(str.charAt(i)!='z'&&str.charAt(i+2)!='p'){
+	// return str;
+	// }
+	// }
+	// for(int i=0;i<str.length()-2;i++){
+	//
+	// if(str.charAt(i)!='z'&&str.charAt(i+2)!='p'){
+	// s1=s1+str.charAt(i)+str.charAt(i+1)+str.charAt(i+2);
+	//
+	// }else{
+	// s1=s1+str.charAt(i)+str.charAt(i+2);
+	// }
+	// }
+	// return s1;
+	// }
+	public static String zipZap(String string) {
+		byte[] bytes = string.getBytes();
 
 		List<Integer> intList = new ArrayList<Integer>();
 		intList.add(0);
 
-		for (int i = 0, j = bytes.length; i < j; i ++) {
+		for (int i = 0, j = bytes.length; i < j; i++) {
 
 			if (bytes[i] == 'z') {
 
 				for (int m = i + 1; m < j; m++) {
 
-					if(bytes[m] == 'z') {
+					if (bytes[m] == 'z') {
 						i = m;
 						continue;
 					}
@@ -301,31 +303,28 @@ public class everyNth {
 						i = m;
 						break;
 					}
-					
+
 				}
 			}
 		}
 		intList.add(bytes.length - 1);
 
 		System.out.println(intList.toString());
-		
+
 		List<Byte> tempList = new ArrayList<Byte>();
-		
-		for (int i = 0, j = intList.size()/2; i < j; i ++) {
-			for (int m = intList.get(i*2),n = intList.get(i*2 + 1); m <= n; m ++) {
+
+		for (int i = 0, j = intList.size() / 2; i < j; i++) {
+			for (int m = intList.get(i * 2), n = intList.get(i * 2 + 1); m <= n; m++) {
 				tempList.add(bytes[m]);
 			}
 		}
-			
+
 		byte[] rtnByte = new byte[tempList.size()];
-		for (int i = 0, j = tempList.size(); i < j; i ++) {
+		for (int i = 0, j = tempList.size(); i < j; i++) {
 			rtnByte[i] = tempList.get(i);
 		}
-		
+
 		return new String(rtnByte);
 	}
-	
-
-
 
 }

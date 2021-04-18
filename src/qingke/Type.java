@@ -9,7 +9,7 @@ public class Type {
 		long d = 1234;
 		char e = 'a';
 		char s1 = byteTochar(a);
-		char s2 =shortTochar(b); 
+		char s2 = shortTochar(b);
 		char s3 = intTochar(c);
 		char s4 = longTochar(d);
 		System.out.println(s1);
@@ -17,24 +17,25 @@ public class Type {
 		System.out.println(s3);
 		System.out.println(s4);
 	}
-	public static char byteTochar(byte a){
-		char c = (char)a;
+
+	public static char byteTochar(byte a) {
+		char c = (char) a;
 		return c;
 	}
-	public static char shortTochar(short a){
-		char c = (char)a;
-		return c;
-	}	
-	public static char intTochar(int a){
-		char c = (char)a;
+
+	public static char shortTochar(short a) {
+		char c = (char) a;
 		return c;
 	}
-	public static char longTochar(long a){
-		char c = (char)a;
+
+	public static char intTochar(int a) {
+		char c = (char) a;
 		return c;
 	}
-		
-	
-	
+
+	public static char longTochar(long a) {
+		char c = (char) a;
+		return c;
+	}
 
 }

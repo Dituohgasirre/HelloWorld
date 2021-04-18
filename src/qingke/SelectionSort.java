@@ -2,7 +2,7 @@ package qingke;
 
 public class SelectionSort {
 	public static void main(String[] args) {
-		int[] list = { 12, 9, 4, 6, 5, 3};
+		int[] list = { 12, 9, 4, 6, 5, 3 };
 		SelectionSort.selectionSort(list);
 		for (int i = 0; i < 6; i++) {
 			System.out.println(list[i]);
@@ -21,7 +21,7 @@ public class SelectionSort {
 			}
 			if (currentMinIndex != i) {
 				list[currentMinIndex] = list[i];
-				list[i] =  currentMin;
+				list[i] = currentMin;
 			}
 		}
 	}

@@ -14,7 +14,7 @@ public class BankThread {
 class BankAccount {
 	private double balance = 1000;
 
-	public/*synchronized*/ boolean deposit(double newAdd) {
+	public/* synchronized */ boolean deposit(double newAdd) {
 		if (balance <= 0) {
 			return false;
 		} else {

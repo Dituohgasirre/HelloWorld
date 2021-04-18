@@ -1,29 +1,35 @@
 package qingke1;
 
-public class Person implements Cloneable{
+public class Person implements Cloneable {
 	private String name;
 	private String address;
-	
-	public Person(String name,String address){
-		this.name=name;
-		this.address=address;
+
+	public Person(String name, String address) {
+		this.name = name;
+		this.address = address;
 	}
-	public String getName(){
+
+	public String getName() {
 		return name;
 	}
-	public void setName(String name){
-		this.name=name;
+
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getAddress(){
+
+	public String getAddress() {
 		return address;
 	}
-	public void setAddress(String address){
-		this.address=address;
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
-	public String toString(){
-		return "Person[name="+name+",address="+address+"]";
+
+	public String toString() {
+		return "Person[name=" + name + ",address=" + address + "]";
 	}
-	 public  Object clone() throws CloneNotSupportedException{
-		 return super.clone();
-	 }
+
+	public Object clone() throws CloneNotSupportedException {
+		return super.clone();
+	}
 }

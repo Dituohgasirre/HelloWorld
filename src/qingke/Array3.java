@@ -98,79 +98,79 @@ public class Array3 {
 			if (!t) {
 				return false;
 			}
-			
+
 		}
 		return true;
 
 	}
+
 	public int[] squareUp(int n) {
-		  int[] a =new int[n*n];
-		  for(int i=0;i<a.length;i++){
-			  a[i]=0;
-		  }
-		  for(int i=0;i<n;i++){
-			  for(int j=n-1;j>n-i-2;j--){
-				  a[i*n+j]=n-j;
-			  }
-		  }
-		  return a;
+		int[] a = new int[n * n];
+		for (int i = 0; i < a.length; i++) {
+			a[i] = 0;
+		}
+		for (int i = 0; i < n; i++) {
+			for (int j = n - 1; j > n - i - 2; j--) {
+				a[i * n + j] = n - j;
+			}
+		}
+		return a;
 	}
+
 	public int[] seriesUp(int n) {
-		  int[] a=new int[n*(n+1)/2];
-		  int start =1;
-		  for(int i=0,j=1;i<a.length;i++){
-			  a[i]=j;
-			  j++;
-			  if(j>start){
-				  j=1;
-				  start++;
-			  }
-		  }
-		  return a;
+		int[] a = new int[n * (n + 1) / 2];
+		int start = 1;
+		for (int i = 0, j = 1; i < a.length; i++) {
+			a[i] = j;
+			j++;
+			if (j > start) {
+				j = 1;
+				start++;
+			}
+		}
+		return a;
 	}
-	public  int maxMirror(int[] nums){
-		if(nums.length<2)
+
+	public int maxMirror(int[] nums) {
+		if (nums.length < 2)
 			return nums.length;
 		int[] arr = new int[nums.length];
-		for(int i=0;i<arr.length;i++)
-			arr[i]=nums[nums.length-1-i];
-		int max=0;
-		for(int i=0;i<nums.length;i++){
-			for(int j=0;j<arr.length;j++){
-				if(nums[i]==arr[j]){
-					int count=0;
-					for(int k=0;k<nums.length-Math.max(i,j);k++){
-						if(nums[i+k]==arr[j+k])
+		for (int i = 0; i < arr.length; i++)
+			arr[i] = nums[nums.length - 1 - i];
+		int max = 0;
+		for (int i = 0; i < nums.length; i++) {
+			for (int j = 0; j < arr.length; j++) {
+				if (nums[i] == arr[j]) {
+					int count = 0;
+					for (int k = 0; k < nums.length - Math.max(i, j); k++) {
+						if (nums[i + k] == arr[j + k])
 							count++;
 						else
 							break;
 					}
-					max=Math.max(max,count);
+					max = Math.max(max, count);
 				}
 			}
 		}
 		return max;
 	}
-	public  int countClumps(int[] nums){
-		if(nums.length<2)
+
+	public int countClumps(int[] nums) {
+		if (nums.length < 2)
 			return 0;
-		int count=0;
-		boolean isCount=true;
-		for(int i=1;i<nums.length;i++){
-			if(nums[i-1]==nums[i]){
-				if(isCount){
+		int count = 0;
+		boolean isCount = true;
+		for (int i = 1; i < nums.length; i++) {
+			if (nums[i - 1] == nums[i]) {
+				if (isCount) {
 					count++;
-					isCount=false;
+					isCount = false;
 				}
-			}
-			else
-				isCount=true;
+			} else
+				isCount = true;
 		}
 		return count;
-	
-}
 
-
-
+	}
 
 }

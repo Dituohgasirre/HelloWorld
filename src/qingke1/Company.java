@@ -1,13 +1,15 @@
 package qingke1;
 
 public class Company {
-	public final void payMoney(){
-		
+	public final void payMoney() {
+
 	}
-	public void sell(){
-		
+
+	public void sell() {
+
 	}
-	public void hire(){
-		
+
+	public void hire() {
+
 	}
 }

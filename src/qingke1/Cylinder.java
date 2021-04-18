@@ -1,33 +1,38 @@
 package qingke1;
 
-public class Cylinder extends Circle{
-	private double height =1.0;
-	
-	public Cylinder(){
-		
+public class Cylinder extends Circle {
+	private double height = 1.0;
+
+	public Cylinder() {
+
 	}
-	public Cylinder(double radius){
+
+	public Cylinder(double radius) {
 		super(radius);
 	}
-	public Cylinder(double radius,double height){
+
+	public Cylinder(double radius, double height) {
 		this(radius);
-		this.height=height;
-		
+		this.height = height;
+
 	}
-	public Cylinder(double radius,double height,String color){
-		this(radius,height);
+
+	public Cylinder(double radius, double height, String color) {
+		this(radius, height);
 		super.setColor(color);
-		
+
 	}
-	public double getHeight(){
+
+	public double getHeight() {
 		return height;
 	}
-	public void setHeight(double height){
-		this.height=height;
+
+	public void setHeight(double height) {
+		this.height = height;
 	}
-	public double getVolume(){
-		return getArea()*height;
+
+	public double getVolume() {
+		return getArea() * height;
 	}
-	
-	
+
 }

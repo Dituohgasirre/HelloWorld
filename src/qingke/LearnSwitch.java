@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class LearnSwitch {
 
 	public static void main(String[] args) {
-		
+
 		int score;
 		int a;
 		Scanner sc = new Scanner(System.in);

@@ -3,7 +3,7 @@ package qingke1;
 public class TestRectangle {
 
 	public static void main(String[] args) {
-		Rectangle rectangle =new Rectangle();
+		Rectangle rectangle = new Rectangle();
 		rectangle.setLength(-2);
 		rectangle.setWidth(2);
 		System.out.println(rectangle.getArea());
