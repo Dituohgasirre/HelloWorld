@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<People>
+	<person areaid="01">
+		<area>中国</area>
+		<income>3000.0</income>
+		<ofarea></ofarea>
+		<boss>习大大</boss>
+	</person>
+	<person areaid="02">
+		<area>浙江省</area>
+		<income>3500.0</income>
+		<ofarea>01</ofarea>
+		<boss>夏宝龙</boss>
+	</person>
+	<person areaid="03">
+		<area>余杭区</area>
+		<income>4000.0</income>
+		<ofarea>05</ofarea>
+		<boss>马云</boss>
+	</person>
+	<person areaid="04">
+		<area>上海市</area>
+		<income>3800.0</income>
+		<ofarea>01</ofarea>
+		<boss>韩正</boss>
+	</person>
+	<person areaid="05">
+		<area>杭州市</area>
+		<income>3600.0</income>
+		<ofarea>02</ofarea>
+		<boss>赵一德</boss>
+	</person>
+	<person areaid="06">
+		<area>西湖区</area>
+		<income>3100.0</income>
+		<ofarea>05</ofarea>
+		<boss>宋卫平</boss>
+	</person>
+	<person areaid="07">
+		<area>陆家嘴</area>
+		<income>5000.0</income>
+		<ofarea>04</ofarea>
+	</person>
+	<person areaid="08">
+		<area>海创园</area>
+		<income>5000.0</income>
+		<ofarea>03</ofarea>
+		<boss>赵贺强</boss>
+	</person>
+	<person areaid="09">
+		<area>轻课网</area>
+		<income>6000.0</income>
+		<ofarea>08</ofarea>
+		<boss>韩伟</boss>
+	</person>
+	<person areaid="10">
+		<area>南京市</area>
+		<income>2000.0</income>
+		<ofarea>10</ofarea>
+		<boss>黄莉新</boss>
+	</person>
+	<person areaid="11">
+		<area>江苏省</area>
+		<income>1000.0</income>
+		<ofarea>01</ofarea>
+		<boss>罗志军</boss>
+	</person>
+	<person areaid="13">
+		<area>苏州市</area>
+		<income>3000.0</income>
+		<ofarea>11</ofarea>
+		<boss>周乃翔</boss>
+	</person>
+</People>
